@@ -12,7 +12,7 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "options": {
+          "options": {            
             "outputPath": "dist/recipe-app-v2",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"	            
             ],
             "scripts": []
           },
@@ -62,7 +63,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "recipe-app-v2:build"
+            "browserTarget": "recipe-app-v2:build",
+            "port":9200
           },
           "configurations": {
             "production": {
